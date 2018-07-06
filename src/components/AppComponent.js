@@ -20,7 +20,7 @@ class AppComponent extends React.Component {
     * Defining the Routes for the application
     */
 		componentDidMount() {
-	 scrollToComponent(this.Blue, { offset: 0, align: 'middle', duration: 500, ease:'inCirc'});
+
  }
 	render() {
 		return (
@@ -35,22 +35,22 @@ class AppComponent extends React.Component {
 		        <div className="collapse navbar-collapse" id="navbarResponsive">
 		          <ul className="navbar-nav ml-auto">
 		            <li className="nav-item mx-0 mx-lg-1">
-		              <div className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onClick={() => scrollToComponent(this.Violet, { offset: 0, align: 'top', duration: 1500})}>Stalls</div>
+		              <div className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onClick={() => scrollToComponent(this.stalls, { offset:-70, align: 'top', duration: 1500})}>Stalls</div>
 		            </li>
 		            <li className="nav-item mx-0 mx-lg-1">
-		              <div className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onClick={() => scrollToComponent(this.Yellow, { offset: 0, align: 'top', duration: 1500})}  >Maps</div>
+		              <div className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onClick={() => scrollToComponent(this.maps, { offset: -70, align: 'top', duration: 1500})}  >Maps</div>
 		            </li>
 		            <li className="nav-item mx-0 mx-lg-1">
-		              <div className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</div>
+		              <div className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onClick={() => scrollToComponent(this.about, { offset:-70, align: 'top', duration: 1500})}>About</div>
 		            </li>
 		            <li className="nav-item mx-0 mx-lg-1">
-		              <a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+		              <div className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onClick={() => scrollToComponent(this.contact, { offset:-70, align: 'top', duration: 1500})}>Contact Us</div>
 		            </li>
 		            <li className="nav-item mx-0 mx-lg-1">
-		              <a className="nav-link py-3 px-0 px-lg-3  js-scroll-trigger" href="#contact">Sign Up</a>
+		              <div className="nav-link py-3 px-0 px-lg-3  js-scroll-trigger" onClick={() => scrollToComponent(this.signup, { offset:-70, align: 'top', duration: 1500})}>Sign up</div>
 		            </li>
 		            <li className="nav-item mx-0 mx-lg-1">
-		              <a className="nav-link py-3 px-0 px-lg-3  js-scroll-trigger" href="#contact">Sign In</a>
+		              <div className="nav-link py-3 px-0 px-lg-3  js-scroll-trigger" onClick={() => scrollToComponent(this.signin, { offset:-70, align: 'top', duration: 1500})}>Sign In</div>
 		            </li>
 		      </ul>
 		        </div>
@@ -61,41 +61,7 @@ class AppComponent extends React.Component {
 					<img style={Styles.mainLogo} src={makersmarket} />
 
 				</div>
-
-				<section className='blue features-icons bg-light text-center' ref={(section) => { this.Blue = section; }}>
-					<div className="container">
-		        <div className="row">
-		          <div className="col-lg-4">
-		            <div className="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-		              <div className="features-icons-icon d-flex">
-		                <i className="icon-screen-desktop m-auto text-primary"></i>
-		              </div>
-		              <h3>Fully Responsive</h3>
-		              <p className="lead mb-0">This theme will look great on any device, no matter the size!</p>
-		            </div>
-		          </div>
-		          <div className="col-lg-4">
-		            <div className="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-		              <div className="features-icons-icon d-flex">
-		                <i className="icon-layers m-auto text-primary"></i>
-		              </div>
-		              <h3>Bootstrap 4 Ready</h3>
-		              <p className="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
-		            </div>
-		          </div>
-		          <div className="col-lg-4">
-		            <div className="features-icons-item mx-auto mb-0 mb-lg-3">
-		              <div className="features-icons-icon d-flex">
-		                <i className="icon-check m-auto text-primary"></i>
-		              </div>
-		              <h3>Easy to Use</h3>
-		              <p className="lead mb-0">Ready to use with your own content, or customize the source files!</p>
-		            </div>
-		          </div>
-		        </div>
-		      </div>
-				</section>
-				<section className='violet' ref={(section) => { this.Violet = section; }}>Violet
+				<section className='stalls' ref={(section) => { this.stalls = section; }}>Violet
 Group of Monuments at Hampi
 UNESCO World Heritage site
 Hampi virupaksha temple.jpg
@@ -174,6 +140,41 @@ According to historical memoirs left by Portuguese and Persian traders to Hampi,
 		        </div>
 		      </div>
 		    </section>
+
+				<section className='blue features-icons bg-light text-center' ref={(section) => { this.Blue = section; }}>
+					<div className="container">
+		        <div className="row">
+		          <div className="col-lg-4">
+		            <div className="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+		              <div className="features-icons-icon d-flex">
+		                <i className="icon-screen-desktop m-auto text-primary"></i>
+		              </div>
+		              <h3>Fully Responsive</h3>
+		              <p className="lead mb-0">This theme will look great on any device, no matter the size!</p>
+		            </div>
+		          </div>
+		          <div className="col-lg-4">
+		            <div className="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+		              <div className="features-icons-icon d-flex">
+		                <i className="icon-layers m-auto text-primary"></i>
+		              </div>
+		              <h3>Bootstrap 4 Ready</h3>
+		              <p className="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+		            </div>
+		          </div>
+		          <div className="col-lg-4">
+		            <div className="features-icons-item mx-auto mb-0 mb-lg-3">
+		              <div className="features-icons-icon d-flex">
+		                <i className="icon-check m-auto text-primary"></i>
+		              </div>
+		              <h3>Easy to Use</h3>
+		              <p className="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+				</section>
+
 
 				<footer className="footer bg-light">
 		      <div className="container">
