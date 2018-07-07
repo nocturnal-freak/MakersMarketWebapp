@@ -12,7 +12,7 @@ import makersmarket from "./images/main.jpeg"
 const Styles = {
 	mainLogo: {
 		height: 'auto',
-		Width: '100%'
+		width: '100%'
 	}
 }
 class AppComponent extends React.Component {
@@ -57,7 +57,7 @@ class AppComponent extends React.Component {
 		      </div>
 		    </nav>
 
-				<div class="masthead text-white text-center">
+				<div className="masthead text-white text-center">
 					<img style={Styles.mainLogo} src={makersmarket} />
 
 				</div>
@@ -90,7 +90,7 @@ According to historical memoirs left by Portuguese and Persian traders to Hampi,
 
         <section className='green' ref={(section) => { this.Green = section; }}>Green</section>
 
-				<section className="testimonials text-center bg-light" ref={(section) => { this.Yellow = section; }}>
+				<section className="testimonials text-center bg-light" ref={(section) => { this.about = section; }}>
 		      <div className="container">
 		        <h2 className="mb-5">What people are saying...</h2>
 		        <div className="row">
@@ -118,7 +118,7 @@ According to historical memoirs left by Portuguese and Persian traders to Hampi,
 		        </div>
 		      </div>
 		    </section>
-				<section className="call-to-action text-white text-center" ref={(section) => { this.Orange = section; }}>
+				<section className="call-to-action text-white text-center" ref={(section) => { this.contact = section; }}>
 		      <div className="overlay"></div>
 		      <div className="container">
 		        <div className="row">
@@ -129,10 +129,10 @@ According to historical memoirs left by Portuguese and Persian traders to Hampi,
 		            <form>
 		              <div className="form-row">
 		                <div className="col-12 col-md-9 mb-2 mb-md-0">
-		                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email..." />
+		                  <input type="email" className="form-control form-control-lg" placeholder="Enter your email..." />
 		                </div>
-		                <div class="col-12 col-md-3">
-		                  <button type="submit" class="btn btn-block btn-lg btn-primary">Send!</button>
+		                <div className="col-12 col-md-3">
+		                  <button type="submit" className="btn btn-block btn-lg btn-primary">Send!</button>
 		                </div>
 		              </div>
 		            </form>
@@ -197,7 +197,7 @@ According to historical memoirs left by Portuguese and Persian traders to Hampi,
 		                <a href="#">Privacy Policy</a>
 		              </li>
 		            </ul>
-		            <p className="text-muted small mb-4 mb-lg-0">&copy; Your Website 2018. All Rights Reserved.</p>
+		            <p className="text-muted small mb-4 mb-lg-0">&copy; Makers Market 2018. All Rights Reserved @nocturnal-techies.</p>
 		          </div>
 		          <div className="col-lg-6 h-100 text-center text-lg-right my-auto">
 		            <ul className="list-inline mb-0">
