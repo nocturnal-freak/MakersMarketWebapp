@@ -86,9 +86,9 @@ Located in Karnataka near the modern-era city of Hosapete, Hampi's ruins are spr
 The Vijayanagara Empire built its capital around Hampi, calling it Vijayanagara. They expanded the infrastructure and temples. According to Nicholas Gier and other scholars,[3] by 1500 CE Hampi-Vijayanagara was the world's second-largest medieval-era city after Beijing, and probably India's richest. Its wealth attracted 16th-century traders from across the Deccan area, Persia and the Portuguese colony of Goa.[4][31] The Vijayanagara rulers fostered developments in intellectual pursuits and the arts, maintained a strong military and fought many wars with sultanates to its north and east. They invested in roads, waterworks, agriculture, religious buildings and public infrastructure. This included, states UNESCO, "forts, riverside features, royal and sacred complexes, temples, shrines, pillared halls, mandapas (halls for people to sit), memorial structures, gateways, check posts, stables, water structures, and more".[7] The site was multi-religious and multi-ethnic; it included Hindu and Jain monuments next to each other. The buildings predominantly followed South Indian Hindu arts and architecture dating to the Aihole-Pattadakal styles, but the Hampi builders also used elements of Indo-Islamic architecture in the Lotus Mahal, the public bath and the elephant stables.[7]
 
 According to historical memoirs left by Portuguese and Persian traders to Hampi, the city was of metropolitan proportions; they called it "one of the most beautiful cities". While prosperous and in infrastructure, the Muslim-Hindu wars between Muslim Sultanates and Vijayanagara Empire continued. In 1565, at the Battle of Talikota, a coalition of Muslim sultanates entered into a war with the Vijayanagara Empire.[7] They captured and b</section>
-        <section className='indigo' ref={(section) => { this.Indigo = section; }}>Indigo</section>
+        {/* {<section className='indigo' ref={(section) => { this.Indigo = section; }}>Indigo</section>
 
-        <section className='green' ref={(section) => { this.Green = section; }}>Green</section>
+        <section className='green' ref={(section) => { this.Green = section; }}>Green</section>} */}
 
 				<section className="testimonials text-center bg-light" ref={(section) => { this.about = section; }}>
 		      <div className="container">
