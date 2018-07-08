@@ -6,7 +6,6 @@ class Home extends React.Component {
 
 		return (
 			<div className='container'>
-				<div>Hodfsgfme</div>
 			</div>
         );
     }
