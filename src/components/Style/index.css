@@ -11,12 +11,13 @@ header.masthead {
   position: relative;
   background-color: #343a40;
   background: url(../images/main.jpeg) no-repeat center center;
-  -webkit-background-size: 1315px 560px;
-  -moz-background-size: 1315px 560px;
-  -o-background-size: 1315px 560px;
-  background-size: 1315px 560px;
-  padding-top: 8rem;
-  padding-bottom: 8rem
+  -webkit-background-size: 1315px 580px;
+  -moz-background-size: 1315px 580px;
+  -o-background-size: 1315px 580px;
+  background-size: 1315px 580px;
+  padding-top:8rem;
+  padding-bottom: 8rem;
+
 }
 
 header.masthead .overlay {
@@ -97,10 +98,10 @@ header.masthead h1 {
   position: relative;
   background-color: #343a40;
   background: url(../images/main.jpeg) no-repeat center center;
-  -webkit-background-size: 1315px 560px;
-  -moz-background-size: 1315px 560px;
-  -o-background-size: 1315px 560px;
-  background-size: 1315px 560px;
+  -webkit-background-size: 1315px 580px;
+  -moz-background-size: 1315px 580px;
+  -o-background-size: 1315px 580px;
+  background-size: 1315px 580px;
 
 }
 
@@ -128,17 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-header.masthead {
-  position: relative;
-  background-color: #343a40;
-  background: url("../images/main.jpeg") no-repeat center center;
-  -webkit-background-size: 1315px 560px;
-  -moz-background-size: 1315px 560px;
-  -o-background-size: 1315px 560px;
-  background-size: 1315px 560px;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
+
 
 header.masthead .overlay {
   position: absolute;
@@ -156,7 +147,7 @@ header.masthead h1 {
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 36rem;
+    padding-top: 33.5rem;
 
   }
   header.masthead h1 {
@@ -170,7 +161,7 @@ header.masthead h1 {
 
 .showcase .showcase-img {
   min-height: 30rem;
-  background-size: 1315px 560px;
+  background-size: 1315px 580px;
 }
 
 @media (min-width: 768px) {
@@ -218,10 +209,10 @@ header.masthead h1 {
   position: relative;
   background-color: #343a40;
   background: url("../images/main.jpeg") no-repeat center center;
-  -webkit-background-size: 1315px 560px;
-  -moz-background-size: 1315px 560px;
-  -o-background-size: 1315px 560px;
-  background-size: 1315px 560px;
+  -webkit-background-size: 1315px 580px;
+  -moz-background-size: 1315px 580px;
+  -o-background-size: 1315px 580px;
+  background-size: 1315px 580px;
   padding-top: 7rem;
   padding-bottom: 7rem;
 }
