@@ -74,7 +74,7 @@ Selling tickets that aren't free? Our fees are low and can be passed through to 
 				</h5>
 				</section>
 
-				
+
 
 
 				<section className="testimonials text-center bg-light" ref={(section) => { this.about = section; }}>
@@ -105,7 +105,7 @@ Selling tickets that aren't free? Our fees are low and can be passed through to 
 						</div>
 					</div>
 				</section>
-				<section className="call-to-action text-white text-center" ref={(section) => { this.contact = section; }}>
+				<section className="contactUSCSS" ref={(section) => { this.contact = section; }}>
 					<div className="overlay"></div>
 					<div className="container">
 						<div className="row">
