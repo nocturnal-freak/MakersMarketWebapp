@@ -8,6 +8,7 @@ import "./Style/index.css"
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import scrollToComponent from 'react-scroll-to-component';
 import makersmarket from "./images/main.jpeg"
+const aws = require('aws-sdk')
 
 const Styles = {
 	mainLogo: {
@@ -21,9 +22,51 @@ class AppComponent extends React.Component {
     /*
     * Defining the Routes for the application
     */
-		componentDidMount() {
+		constructor(props){
+			super(props);
+			this.state={contact_email:""}
+		}
+		handleChange(e){
+			this.setState({contact_email:e.target.value})
+		}
+		  sendMail=()=> {
 
- }
+				aws.config.update({
+				  accessKeyId: "AKIAJL4PARAP76H6O2CA",
+				  secretAccessKey: "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",
+				  region: "us-east-1"
+				});
+				const ses = new aws.SES()
+				var params = {
+				  Destination: {
+				    ToAddresses: ['info@makersmarket.co.in']
+				  },
+				  Source: 'info@makersmarket.co.in',
+				  Message: {
+				    Body: {
+				      Text: {
+				        Charset: 'UTF-8',
+				        Data: this.state.contact_email
+				      }
+				    },
+				    Subject: {
+				      Data: 'Hey, I wanted to contact you!'
+				    }
+				  }
+				}
+				ses.sendEmail(params, (err, data) => {
+				  if (err) {
+				    console.log(err)
+				  }
+
+				  console.log('email sent');
+					this.setState({contact_email: ""})
+				})
+
+
+			}
+
+
 	render() {
 		return (
 			<div className=''>
@@ -113,16 +156,17 @@ Selling tickets that aren't free? Our fees are low and can be passed through to 
 								<h2 className="mb-4">Wanna get touch with us? Drop your email now!</h2>
 							</div>
 							<div className="col-md-10 col-lg-8 col-xl-7 mx-auto">
-								<form>
-									<div className="form-row">
+
 										<div className="col-12 col-md-9 mb-2 mb-md-0">
-											<input type="email" className="form-control form-control-lg" placeholder="Enter your email..." />
+											<input type="email" className="form-control form-control-lg" placeholder="Enter your email..."
+											onChange={e => this.handleChange(e)}
+											value={this.state.contact_email}
+											/>
 										</div>
-										<div className="col-12 col-md-3">
-											<button type="submit" className="btn btn-block btn-lg btn-primary">Send!</button>
+										<div className="col-12 col-md-9 mb-2 mb-md-0">
+											<button className="btn btn-block btn-lg btn-primary" type="submit" onClick={this.sendMail}>Send!</button>
 										</div>
-									</div>
-								</form>
+
 							</div>
 						</div>
 					</div>
@@ -181,7 +225,6 @@ Selling tickets that aren't free? Our fees are low and can be passed through to 
 					<Route path='/contact-us' component={ContactUs} />
 					<Route path='*' component={NotFound} />
 				</Switch>
-
 				</div>
 
 
