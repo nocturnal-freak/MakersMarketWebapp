@@ -95,13 +95,14 @@ header.masthead h1 {
 }
 
 .call-to-action {
-  position: relative;
-  background-color: #343a40;
-  background: url(../images/main.jpeg) no-repeat center center;
-  -webkit-background-size: 1315px 580px;
-  -moz-background-size: 1315px 580px;
-  -o-background-size: 1315px 580px;
-  background-size: 1315px 580px;
+
+    position: absolute;
+    background-color: #343a40;
+
+    padding-top:8rem;
+    padding-bottom: 8rem;
+
+
 
 }
 
@@ -205,19 +206,15 @@ header.masthead h1 {
   box-shadow: 0px 5px 5px 0px #adb5bd;
 }
 
-.call-to-action {
+.contactUSCSS {
   position: relative;
   background-color: #343a40;
-  background: url("../images/main.jpeg") no-repeat center center;
-  -webkit-background-size: 1315px 580px;
-  -moz-background-size: 1315px 580px;
-  -o-background-size: 1315px 580px;
-  background-size: 1315px 580px;
+
   padding-top: 7rem;
   padding-bottom: 7rem;
 }
 
-.call-to-action .overlay {
+.contactUSCSS .overlay {
   position: absolute;
   background-color: #212529;
   height: 100%;
@@ -226,8 +223,79 @@ header.masthead h1 {
   left: 0;
   opacity: 0.3;
 }
-
+.pointer-nav {
+  cursor: pointer;
+}
 footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+// Styling for the navbar
+#mainNav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @include heading-font;
+  .navbar-brand {
+    color: $white;
+  }
+  .navbar-nav {
+    margin-top: 1rem;
+    letter-spacing: 0.0625rem;
+    li.nav-item {
+      a.nav-link {
+        color: $white;
+        &:hover {
+          color: $primary;
+        }
+        &:active,
+        &:focus {
+          color: $white;
+        }
+        &.active {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .navbar-toggler {
+    font-size: 80%;
+    padding: 0.8rem;
+  }
+}
+@media(min-width:992px) {
+  #mainNav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    .navbar-brand {
+      font-size: 2em;
+      -webkit-transition: font-size 0.3s;
+      -moz-transition: font-size 0.3s;
+      transition: font-size 0.3s;
+    }
+    .navbar-nav {
+      margin-top: 0;
+    }
+    .navbar-nav > li.nav-item > a.nav-link.active {
+      color: $white;
+      background: $primary;
+      &:active,
+      &:focus,
+      &:hover {
+        color: $white;
+        background: $primary;
+      }
+    }
+  }
+  #mainNav.navbar-shrink {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    .navbar-brand {
+      font-size: 1.5em;
+    }
+  }
 }
