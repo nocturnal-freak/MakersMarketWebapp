@@ -44,12 +44,25 @@ class AppComponent extends React.Component {
     */
 		constructor(props){
 			super(props);
-			this.state={contact_email:""}
+			this.state={
+				VENDORname: "",
+				VENDORemail: "",
+				VENDORPhone: "",
+				VENDORabout: "",
+				VOLUNTEERname: "",
+				VOLUNTEEREmail: "",
+				VOLUNTEERPhone: "",
+				VOLUNTEERAbout: "",
+
+			}
 		}
 		handleChange(e){
-			this.setState({contact_email:e.target.value})
+			this.setState({
+      [e.target.name]:e.target.value
+    })
 		}
 		  sendMail=()=> {
+				console.log("state",this.state);
 
 				aws.config.update({
 				  accessKeyId: "AKIAJL4PARAP76H6O2CA",
@@ -80,7 +93,7 @@ class AppComponent extends React.Component {
 				  }
 
 				  console.log('email sent');
-					this.setState({contact_email: ""})
+
 				})
 
 
@@ -179,24 +192,24 @@ class AppComponent extends React.Component {
 							</div>
 							<div className="col-md-10 col-lg-8 col-xl-7 mx-auto">
 
-										<div className="col-12 col-md-12 mb-2 mb-md-0" style={{'margin-bottom':'2px'}}>
+										<div className="col-12 col-md-12 mb-2 mb-md-0" style={{'marginBottom':'2px'}}>
 											<h2 style={Styles.contact} className="mb-4">VENDOR / SPONSOR </h2>
-											<input type="email" className="rounder form-control form-control-lg" placeholder="Name :"
+											<input type="name" name="VENDORname" className="rounder form-control form-control-lg" placeholder="Name :"
 											onChange={e => this.handleChange(e)}
-											value={this.state.contact_email}
+											value={this.state.VENDORname}
 											/>
-											<input type="email" className="rounder form-control form-control-lg" placeholder="Email :"
+											<input type="email" name="VENDORemail" className="rounder form-control form-control-lg" placeholder="Email :"
 											onChange={e => this.handleChange(e)}
-											value={this.state.contact_email}
+											value={this.state.VENDORemail}
 											/>
-											<input type="email" className="rounder form-control form-control-lg" placeholder="Phone Number :"
+											<input type="email" name="VENDORPhone" className="rounder form-control form-control-lg" placeholder="Phone Number :"
 											onChange={e => this.handleChange(e)}
-											value={this.state.contact_email}
+											value={this.state.VENDORPhone}
 											/>
 											<textarea
-												className="rounder form-control form-control-lg" placeholder="Tell about you here......"
+												className="rounder form-control form-control-lg" name="VENDORabout" placeholder="Tell about you here......"
 												onChange={e => this.handleChange(e)}
-												value={this.state.contact_email}
+												value={this.state.VENDORabout}
 
 											/>
 										</div>
@@ -207,24 +220,24 @@ class AppComponent extends React.Component {
 							</div>
 							<div className="col-md-10 col-lg-8 col-xl-7 mx-auto">
 
-										<div className="col-12 col-md-12 mb-2 mb-md-0" style={{'margin-bottom':'2px'}}>
+										<div className="col-12 col-md-12 mb-2 mb-md-0" style={{'marginBottom':'2px'}}>
 											<h2 style={Styles.contact} className="mb-4">VOLUNTEER </h2>
-											<input type="email" className="rounder form-control form-control-lg" placeholder="Name :"
+											<input type="name" name="VOLUNTEERname" className="rounder form-control form-control-lg" placeholder="Name :"
 											onChange={e => this.handleChange(e)}
-											value={this.state.contact_email}
+											value={this.state.VOLUNTEERname}
 											/>
-											<input type="email" className="rounder form-control form-control-lg" placeholder="Email :"
+											<input type="email" name="VOLUNTEEREmail" className="rounder form-control form-control-lg" placeholder="Email :"
 											onChange={e => this.handleChange(e)}
-											value={this.state.contact_email}
+											value={this.state.VOLUNTEEREmail}
 											/>
-											<input type="email" className="rounder form-control form-control-lg" placeholder="Phone Number :"
+											<input type="email" name="VOLUNTEERPhone" className="rounder form-control form-control-lg" placeholder="Phone Number :"
 											onChange={e => this.handleChange(e)}
-											value={this.state.contact_email}
+											value={this.state.VOLUNTEERPhone}
 											/>
 											<textarea
-												className="rounder form-control form-control-lg" placeholder="Tell about you here......"
+												className="rounder form-control form-control-lg" name="VOLUNTEERAbout" placeholder="Tell about you here......"
 												onChange={e => this.handleChange(e)}
-												value={this.state.contact_email}
+												value={this.state.VOLUNTEERAbout}
 
 											/>
 										</div>
