@@ -138,13 +138,13 @@ class AppComponent extends React.Component {
 
 				</section>
 				<section className="text-center" ref={(section) => { this.about = section; }}>
-					<div className="container">
+
 							<img className="" style={Styles.heading} src={Aboutus} />
 						<div className="col-md-10 marker col-lg-8 col-xl-7 mx-auto">
 							You've got a passion. We want to help you share it. We provide everything you need to make your event a success with a simple, easy to use platform.
 			Selling tickets that aren't free? Our fees are low and can be
 						</div>
-					</div>
+
 				</section>
 
 
