@@ -1,0 +1,21 @@
+{
+  "name": "makers-market-webapp",
+  "version": "0.1.7",
+  "private": true,
+  "dependencies": {
+    "aws-sdk": "^2.270.1",
+    "bootstrap": "^4.1.1",
+    "font-awesome": "^4.7.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "react-scroll-to-component": "^1.0.2"
+  },
+  "scripts": {
+    "start": "PORT=3000 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
