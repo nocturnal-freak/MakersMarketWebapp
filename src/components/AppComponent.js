@@ -91,10 +91,10 @@ class AppComponent extends React.Component {
 		return (
 			<div className='main-background'>
 
-				<section className='text-center' ref={(section) => { this.stalls = section; }}>
+				<section className='text-center' ref={(section) => { this.Home = section; }}>
 					<nav className="navbar navbar-expand-lg navbar-light bg-light static-top fixed-top text-uppercase">
 			      <div className="container">
-			        <a className="navbar-brand js-scroll-trigger" href="#">Home</a>
+			        <a className="pointer-nav navbar-brand js-scroll-trigger" onClick={() => scrollToComponent(this.Home, { offset:-70, align: 'top', duration: 1500})}>Home</a>
 			        <button className="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 
 			          <i className="fa fa-bars"></i>
@@ -102,23 +102,18 @@ class AppComponent extends React.Component {
 			        <div className="collapse navbar-collapse" id="navbarResponsive">
 			          <ul className="navbar-nav ml-auto">
 			            <li className="nav-item mx-0 mx-lg-1">
-			              <div className="pointer-nav nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onClick={() => scrollToComponent(this.stalls, { offset:-70, align: 'top', duration: 1500})}>Stalls</div>
-			            </li>
-			            <li className="nav-item mx-0 mx-lg-1">
-			              <div className="pointer-nav nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onClick={() => scrollToComponent(this.maps, { offset: -70, align: 'top', duration: 1500})}  >Maps</div>
-			            </li>
-			            <li className="nav-item mx-0 mx-lg-1">
 			              <div className="pointer-nav nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onClick={() => scrollToComponent(this.about, { offset:-70, align: 'top', duration: 1500})}>About</div>
 			            </li>
 			            <li className="nav-item mx-0 mx-lg-1">
-			              <div className="pointer-nav nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onClick={() => scrollToComponent(this.contact, { offset:-70, align: 'top', duration: 1500})}>Contact Us</div>
+			              <div className="pointer-nav nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onClick={() => scrollToComponent(this.Stalls, { offset: -70, align: 'top', duration: 1500})}  >Stalls</div>
 			            </li>
 			            <li className="nav-item mx-0 mx-lg-1">
-			              <div className="pointer-nav nav-link py-3 px-0 px-lg-3  js-scroll-trigger" onClick={() => scrollToComponent(this.signup, { offset:-70, align: 'top', duration: 1500})}>Sign up</div>
+			              <div className="pointer-nav nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onClick={() => scrollToComponent(this.ARTIST, { offset:-70, align: 'top', duration: 1500})}>ARTIST</div>
 			            </li>
 			            <li className="nav-item mx-0 mx-lg-1">
-			              <div className="pointer-nav nav-link py-3 px-0 px-lg-3  js-scroll-trigger" onClick={() => scrollToComponent(this.signin, { offset:-70, align: 'top', duration: 1500})}>Sign In</div>
+			              <div className="pointer-nav nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onClick={() => scrollToComponent(this.contact, { offset:-200, align: 'top', duration: 1500})}>Get Involed</div>
 			            </li>
+
 			      </ul>
 			        </div>
 			      </div>
@@ -129,39 +124,6 @@ class AppComponent extends React.Component {
 
 
 				</section>
-
-
-				<section className='text-center' ref={(section) => { this.stalls = section; }}>
-					<img className="mb-4" style={Styles.heading} src={Stalls} />
-					<h2 style={Styles.contact} className="mb-4 col-md-8">VENDOR'S STALL </h2>
-					<h5 className="marker col-md-10 col-lg-8 col-xl-7 mx-auto">
-					You've got a passion. We want to help you share it. We provide everything you need to make your event a success with a simple, easy to use platform.
-	Selling tickets that aren't free? Our fees are low and can be passed through to the ticket buyer, making it completely free for you
-</h5>
-						<img className="mb-4" style={Styles.headingIcons} src={StallIcons} />
-						<div className="col-12 col-md-12 mb-2 mb-md-0 text-center">
-							<button className="btn btn-primary" type="submit" onClick={this.sendMail}>Send!</button>
-						</div>
-
-				</section>
-				<section className='text-center ' ref={(section) => { this.stalls = section; }}>
-
-					<h2 style={Styles.contact} className="mb-4 col-md-8">ARTIST'S </h2>
-					<h5 className="mb-4 marker col-md-10 col-lg-8 col-xl-7 mx-auto">
-					You've got a passion. We want to help you share it. We provide everything you need to make your event a success with a simple, easy to use platform.
-	Selling tickets that aren't free? Our fees are low and can be passed through to the ticket buyer, making it completely free for you
-</h5>
-						<img className="" style={Styles.headingIcons} src={StallIcons} />
-						<div className="col-12 col-md-12 mb-2 mb-md-0 text-center">
-							<button className="btn btn-primary" type="submit" onClick={this.sendMail}>Send!</button>
-						</div>
-
-				</section>
-
-
-
-
-
 				<section className="text-center" ref={(section) => { this.about = section; }}>
 					<div className="container">
 							<img className="" style={Styles.heading} src={Aboutus} />
@@ -171,6 +133,40 @@ class AppComponent extends React.Component {
 						</div>
 					</div>
 				</section>
+
+
+				<section className='text-center' ref={(section) => { this.Stalls = section; }}>
+					<img className="mb-4" style={Styles.heading} src={Stalls} />
+					<h2 style={Styles.contact} className="mb-4 col-md-8">VENDOR'S STALL </h2>
+					<h5 className="marker col-md-10 col-lg-8 col-xl-7 mx-auto">
+					You've got a passion. We want to help you share it. We provide everything you need to make your event a success with a simple, easy to use platform.
+	Selling tickets that aren't free? Our fees are low and can be passed through to the ticket buyer, making it completely free for you
+</h5>
+						<img className="mb-4" style={Styles.headingIcons} src={StallIcons} />
+						<div className="col-12 col-md-12 mb-2 mb-md-0 text-center">
+							<button className="btn btn-dark" type="submit" onClick={this.sendMail}>Send!</button>
+						</div>
+
+				</section>
+				<section className='text-center ' ref={(section) => { this.ARTIST = section; }}>
+
+					<h2 style={Styles.contact} className="mb-4 col-md-8">ARTIST'S </h2>
+					<h5 className="mb-4 marker col-md-10 col-lg-8 col-xl-7 mx-auto">
+					You've got a passion. We want to help you share it. We provide everything you need to make your event a success with a simple, easy to use platform.
+	Selling tickets that aren't free? Our fees are low and can be passed through to the ticket buyer, making it completely free for you
+</h5>
+						<img className="" style={Styles.headingIcons} src={StallIcons} />
+						<div className="col-12 col-md-12 mb-2 mb-md-0 text-center">
+							<button className="btn btn-dark" type="submit" onClick={this.sendMail}>Send!</button>
+						</div>
+
+				</section>
+
+
+
+
+
+
 				<img className="mb-4" style={Styles.heading} src={getInvoled} />
 				<section className="" ref={(section) => { this.contact = section; }}>
 
@@ -205,7 +201,7 @@ class AppComponent extends React.Component {
 											/>
 										</div>
 										<div className="col-12 col-md-12 mb-2 mb-md-0">
-											<button className="btn btn-block btn-lg btn-primary" type="submit" onClick={this.sendMail}>Send!</button>
+											<button className="btn btn-block btn-dark btn-lg" type="submit" onClick={this.sendMail}>Send!</button>
 										</div>
 
 							</div>
@@ -233,7 +229,7 @@ class AppComponent extends React.Component {
 											/>
 										</div>
 										<div className="col-12 col-md-12 mb-2 mb-md-0">
-											<button className="btn btn-block btn-lg btn-primary" type="submit" onClick={this.sendMail}>Send!</button>
+											<button className="btn btn-block btn-dark btn-lg" type="submit" onClick={this.sendMail}>Send!</button>
 										</div>
 
 							</div>
