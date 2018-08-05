@@ -134,7 +134,7 @@ class AppComponent extends React.Component {
 				<section className='text-center' ref={(section) => { this.stalls = section; }}>
 					<img className="mb-4" style={Styles.heading} src={Stalls} />
 					<h2 style={Styles.contact} className="mb-4 col-md-8">VENDOR'S STALL </h2>
-					<h5 className="col-md-10 col-lg-8 col-xl-7 mx-auto">
+					<h5 className="marker col-md-10 col-lg-8 col-xl-7 mx-auto">
 					You've got a passion. We want to help you share it. We provide everything you need to make your event a success with a simple, easy to use platform.
 	Selling tickets that aren't free? Our fees are low and can be passed through to the ticket buyer, making it completely free for you
 </h5>
@@ -147,7 +147,7 @@ class AppComponent extends React.Component {
 				<section className='text-center ' ref={(section) => { this.stalls = section; }}>
 
 					<h2 style={Styles.contact} className="mb-4 col-md-8">ARTIST'S </h2>
-					<h5 className="mb-4 col-md-10 col-lg-8 col-xl-7 mx-auto">
+					<h5 className="mb-4 marker col-md-10 col-lg-8 col-xl-7 mx-auto">
 					You've got a passion. We want to help you share it. We provide everything you need to make your event a success with a simple, easy to use platform.
 	Selling tickets that aren't free? Our fees are low and can be passed through to the ticket buyer, making it completely free for you
 </h5>
@@ -165,7 +165,7 @@ class AppComponent extends React.Component {
 				<section className="text-center" ref={(section) => { this.about = section; }}>
 					<div className="container">
 							<img className="" style={Styles.heading} src={Aboutus} />
-						<div className="col-md-10 col-lg-8 col-xl-7 mx-auto">
+						<div className="col-md-10 marker col-lg-8 col-xl-7 mx-auto">
 							You've got a passion. We want to help you share it. We provide everything you need to make your event a success with a simple, easy to use platform.
 			Selling tickets that aren't free? Our fees are low and can be
 						</div>
@@ -282,7 +282,7 @@ class AppComponent extends React.Component {
 										<a style={Styles.contact} href="#">Privacy Policy</a>
 									</li>
 								</ul>
-								<p className="text-muted small mb-4 mb-lg-0">&copy; Makers Market 2018. All Rights Reserved @nocturnal-techies.</p>
+								<p className="text-muted marker small mb-4 mb-lg-0">&copy; Makers Market 2018. All Rights Reserved @nocturnal-techies.</p>
 							</div>
 							<div className="col-lg-6 h-100 text-center text-lg-right my-auto">
 
